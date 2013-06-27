@@ -1,0 +1,4 @@
+This folder contains all the code you need for a basic chrome extension.
+Just go to chrome and add this folder as an extension.
+See https://developer.chrome.com/extensions/getstarted.html for details.
+

@@ -1,1 +1,1 @@
-This is my favourite design pattern. It addresses the fundamental issue of breaking down a complex system into multiple modules for fast debugging. Every component can function on its own, and every component can be built of dummy components helping to identify troubled sub-components. 
+This is my favorite design pattern. It addresses the fundamental issue of breaking down a complex system into multiple modules for fast debugging. Every component can function on its own, and every component can be built of dummy components helping to identify troubled sub-components. 

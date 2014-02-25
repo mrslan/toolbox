@@ -3,9 +3,9 @@
 
 int main()
 {
-    IEngine::RunSample();
-    IBrakes::RunSample();
-    ICar::RunSample();
+    Engine::RunSample();
+    Brakes::RunSample();
+    Car::RunSample();
 
     printf("Execution complete\n");
 }

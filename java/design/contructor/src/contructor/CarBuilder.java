@@ -1,5 +1,7 @@
 package contructor;
 
+import contructor.LoggerBuilder.LoggerType;
+
 public final class CarBuilder {
   
   public enum CarType {
@@ -17,18 +19,26 @@ public final class CarBuilder {
     Car car = null;
     Engine engine = null;
     Breaks breaks = null;
+    Logger logger = null;
     
     switch (type) {
     case BASIC:
-      engine = EngineBuilder.GetInstance(EngineBuilder.EngineType.DUMMY);
-      breaks = BreaksBuilder.GetInstance(BreaksBuilder.BreaksType.DUMMY);
-      car = new CarBasic(engine, breaks);
+      engine = EngineBuilder.GetInstance(EngineBuilder.EngineType.DUMMY_WITH_CONSOLE_LOGGER);
+      breaks = BreaksBuilder.GetInstance(BreaksBuilder.BreaksType.DUMMY_WITH_CONSOLE_LOGGER);
+      logger = LoggerBuilder.GetInstance(LoggerType.CONSOLE);
+      
+      car = new CarBasic(engine, breaks, logger);
       
       break;
     case BASIC_COMPOSITE:
       car = new CarBasic(
-          new EngineDummy(),
-          new BreaksDummy()
+          new EngineDummy(
+              new LoggerConsole()
+              ),
+          new BreaksDummy(
+              new LoggerConsole()
+              ),
+          new LoggerConsole()
           );
     default:
       break;

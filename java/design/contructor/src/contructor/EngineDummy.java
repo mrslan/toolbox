@@ -2,14 +2,21 @@ package contructor;
 
 public class EngineDummy implements Engine {
 
+  private Logger logger;
+
+  public EngineDummy(Logger logger) {
+    this.logger = logger;
+    // TODO Auto-generated constructor stub
+  }
+
   @Override
   public void Start() {
-    System.out.println("EngineDummy: Start");
+    logger.Log("EngineDummy: Start");
   }
 
   @Override
   public void Stop() {
-    System.out.println("EngineDummy: Stop");
+    logger.Log("EngineDummy: Stop");
   }
 
 }

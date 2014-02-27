@@ -11,7 +11,7 @@ public class LoggerBuilder {
     
     switch (type) {
     case CONSOLE:
-      logger = new LoggerConsole();
+      logger = LoggerConsole.GetInstance();
       break;
 
     default:

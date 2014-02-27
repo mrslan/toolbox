@@ -1,7 +1,14 @@
 package contructor;
 
 public class LoggerConsole implements Logger {
+  
+  public static LoggerConsole GetInstance() {
 
+    if(logger == null) logger = new LoggerConsole();
+
+    return logger;
+  }
+  
   @Override
   public void Init() {
   }
@@ -14,5 +21,9 @@ public class LoggerConsole implements Logger {
   @Override
   public void Deinit() {
   }
+  
+  private LoggerConsole() {};
+  
+  private static LoggerConsole logger = null;
 
 }

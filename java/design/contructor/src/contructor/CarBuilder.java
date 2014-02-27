@@ -32,13 +32,13 @@ public final class CarBuilder {
       break;
     case BASIC_COMPOSITE:
       car = new CarBasic(
-          new EngineDummy(
-              new LoggerConsole()
+          EngineDummy.GetInstance(
+              LoggerConsole.GetInstance()
               ),
-          new BreaksDummy(
-              new LoggerConsole()
+          BreaksDummy.GetInstance(
+              LoggerConsole.GetInstance()
               ),
-          new LoggerConsole()
+          LoggerConsole.GetInstance()
           );
     default:
       break;

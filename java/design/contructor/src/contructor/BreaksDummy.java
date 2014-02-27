@@ -4,9 +4,12 @@ public class BreaksDummy implements Breaks {
 
   private Logger logger;
 
-  public BreaksDummy(Logger logger) {
+  public static BreaksDummy GetInstance(Logger logger) {
+    return new BreaksDummy(logger);
+  }
+  
+  private BreaksDummy(Logger logger) {
     this.logger = logger;
-    // TODO Auto-generated constructor stub
   }
 
   @Override

@@ -4,9 +4,12 @@ public class EngineDummy implements Engine {
 
   private Logger logger;
 
-  public EngineDummy(Logger logger) {
+  static EngineDummy GetInstance(Logger logger) {
+    return new EngineDummy(logger);
+  }
+  
+  private EngineDummy(Logger logger) {
     this.logger = logger;
-    // TODO Auto-generated constructor stub
   }
 
   @Override

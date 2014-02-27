@@ -12,8 +12,8 @@ public final class EngineBuilder {
     
     switch(type) {
     case DUMMY_WITH_CONSOLE_LOGGER:
-      logger = new LoggerConsole();
-      engine = new EngineDummy(logger);
+      logger = LoggerConsole.GetInstance();
+      engine = EngineDummy.GetInstance(logger);
       break;
       
       default:

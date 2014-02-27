@@ -15,7 +15,7 @@ public final class BreaksBuilder {
     switch (type) {
     case DUMMY_WITH_CONSOLE_LOGGER:
       logger = LoggerBuilder.GetInstance(LoggerType.CONSOLE);
-      breaks = new BreaksDummy(logger);
+      breaks = BreaksDummy.GetInstance(logger);
       break;
 
     default:
